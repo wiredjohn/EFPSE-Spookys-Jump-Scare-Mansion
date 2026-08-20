@@ -1,6 +1,8 @@
 # EFPSE Spooky's Jump Scare Mansion Clone
 **This is a fan-made clone made using [Easy FPS Editor](https://cg8516.itch.io/easyfpseditor-ce). Go download the real game on [Steam](https://store.steampowered.com/app/356670/Spookys_Jump_Scare_Mansion/).**
 
+![EFPSE Gameplay Demo](.github/images/demo.webp)
+
 This repository contains the Project files for the game. Simply download this repo and place the contents within a folder in your EPFSE install location /Projects folder.
 
 Made with [EasyFPSEditor_CE_bugtest5.exe](https://github.com/CG8516/DumpingGround/blob/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest5.exe).

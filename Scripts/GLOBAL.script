@@ -1,0 +1,27 @@
+// GLOBAL map used as the entry point to the game to set global variables used throughout
+
+global.current_room=0				// the index of the current map
+global.last_map1=0					// store the previous map index to exclude it from next map selection
+global.last_map2=0					// store the second previous map index to exclude it from next map selection
+
+global.room_count=0					// number of rooms completed
+global.scare_chance=12				// probability that a trigger_cardboard_scare runs, e.g. if 10 then chance is 1 in 10
+global.chase_chance=5				// probability that specimen_2 will start chasing through rooms if not being chased already
+global.chase_duration=5				// the number of rooms specimen_2 will spawn in while player being chased
+
+global.player_slowed=0				// flag for whether the player is currently slowed by a trigger_slow_tile (true/false)
+global.player_speed_slow=50			// player speed when slowed
+global.player_speed_normal=150		// player speed when walking
+global.player_speed_sprint=300		// player speed when sprinting (VARIABLE NOT USED = VALUE NEEDS HARDCODED IN THE Sprint.script)
+
+global.player_stamina_current=100	// player's current stamina level
+global.player_stamina_max=100		// player's maximum stamina level, won't recharge past this value
+global.player_stamina_min=0			// player's minimum stamina value, can't sprint if player_stamina_current is below this
+global.stamina_rate_increase=2		// how much stamina recharges when not sprinting
+global.stamina_rate_decrease=2		// how much stamina goes down when sprinting
+
+global.player_is_chased=0			// flag for whether the player is being chased (true/false)
+global.player_chase_duration=0		// how many rooms are left of the current chase, set to chase_duration on chase start and -1 every room exited
+global.room_monster_spawned=0		// flag for whether specimen_2 has been spawned in the current room, stops duplicate enemies if trigger re-fires
+
+map goto 1

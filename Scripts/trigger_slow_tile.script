@@ -1,0 +1,6 @@
+// Slow player speed and update their player_slowed flag
+
+player speed $global.player_speed_slow
+if $global.player_slowed == 0 {
+	global.player_slowed=1
+}

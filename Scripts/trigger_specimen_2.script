@@ -1,0 +1,159 @@
+// If the player is being chased and an enemy hasn't already spawned, then spawn specimen_2 at the entrance of the Map
+//
+//  -------------------------------------------------------------------------------------------------------
+//	This was a fucking nightmare to solve and I don't like the final solution.
+//	Simply, when the player enters this trigger I want enemy_specimen_2 (slimey green guy) to 
+//		spawn in at the player start location (the door), as if it's just entered the room.
+//	To do this I need to spawn the enemy at the player start location using:
+//			"entity spawnat enemy_specimen_2 $spawn_x $spawn_y $spawn_z $rotation"
+//	The problem is I can't find a clean way to identify the player start position.
+//	The logical solution would be to check the player's position when they enter the map, 
+//		which can be done in the map.script file using:
+//			"player check position map.entry_x map.entry_y map.entry_z"
+//		then spawning the enemy at those co-ordinates when the trigger is hit.
+//	However, when this runs the values are always 0, 0, 0. Strange. But then if I check 
+//		again on a trigger within the map the values are populated correctly.
+//	I can only assume that at the point a map.script runs, the player object does not
+//		yet exist in the game. Meaning the player properties are inaccessible. Annoying.
+//	Fine. I'll put the check in the map_loop.script and set the player position on the
+//		first execution like this:
+//			// Set room entry point on first run
+//			combined_entry=0
+//			combined_entry+=$global.room_entry_x
+//			combined_entry+=$global.room_entry_y
+//			combined_entry+=$global.room_entry_z
+//	
+//			// Ideally I'd be checing "if x == 0 && y == 0 && z == 0" but EFPSE doesn't support that
+//			// So I'm adding the values together and if it == 0, then all co-ordinates == 0, so it hasn't 
+//			//  been set yet
+//			if $combined_entry == 0 {
+//				player check position global.room_entry_x global.room_entry_y global.room_entry_z			
+//			}
+//	So the first execution of the loop will see that x,y,z haven't been set yet (they get set to 0 on 
+//		room_exit) so it will grab the player's position, store the values and not set it again for
+//		the rest of the map.
+//	HOWEVER.
+//	As soon as I hit my room_exit trigger, the global.room_entry_ values immediately get set to the
+//		position of the player when they hit whatever triggers "map next" / "map goto *" -
+//	WHICH IS THE CO-ORINATES OF THE EXIT OF THE PREVIOUS MAP.
+//	WHICH MEANS THE map_loop.script EXECUTES BEFORE THE MAP HAS LOADED AND THE PLAYER'S STILL ON LAST MAP!!!!
+//	...
+//	My next idea was to pre-calculate the player start position and store this in the map.script file 
+//		for each level using the map data itself (by reading the .eem files in the /Maps folder).
+//	That way the values would be accessible in game even if they're hard-coded, but at least they 
+//		weren't written out by hand.
+//	But I abandonned this because the binary data of the .eem files was too tricky to figure out 
+//		because I haven't worked with binary files before. If it's any use to anyone - I think that 
+//		the Player object is stored as "modifier" data with the value ID of "9", and this data exists
+//		on the first "layer" of the map file that doesn't contain any tile/modifier info. This script
+//		from Clark/CG8516 was useful in figuring this much out: 
+//			https://github.com/CG8516/EFPSE-Project-Fixer/blob/main/Program.cs#L252
+//	I then thought I could spawn the enemy X number of co-ordinates behind the player's current position,
+//		but this would further enforce the assumption that maps start "DOWN" the Y axis and lead up towards
+//		0, and I'd need to create multiple triggers for different distances that the spawn trigger is from
+//		the door (e.g. if trigger, is 3 tiles from door then enemy needs spawned 3 tiles behind player, and 
+//		this would need a seperate trigger for each different distance.)
+//	But ultimately abandonned this because I don't want more trigger tiles shitting up the project.
+//	SO.
+//	Here we are, hardcoding the entry point of each level like an ANIMAL!
+//  Writing if if if if like a PIG!
+//	Please believe me, I tried.
+//	oink oink.
+//  ------------------------------------------------------------------------------------------------------- 
+
+sound door_open "Sounds/enemy_door_open.wav"
+
+if $global.player_is_chased == 1 {
+		
+	if $global.room_monster_spawned == 0 {
+	
+		global.room_monster_spawned=1
+		play sound door_open
+		
+		r=$global.current_room
+
+		// Find the current Map index and spawn the enemy at the specific entry location of that Map
+		if $r == 3 { 
+			entity spawnat enemy_specimen_2 1 6 0 0 
+		}
+		if $r == 4 { 
+			entity spawnat enemy_specimen_2 5 5 0 0 
+		}
+		if $r == 5 { 
+			entity spawnat enemy_specimen_2 1 6 0 0 
+		}
+		if $r == 6 { 
+			entity spawnat enemy_specimen_2 6 7 0 0 
+		}
+		if $r == 7 { 
+			entity spawnat enemy_specimen_2 6 7 0 0 
+		}
+		if $r == 8 { 
+			entity spawnat enemy_specimen_2 6 7 0 0 
+		}
+		if $r == 9 { 
+			entity spawnat enemy_specimen_2 6 5 0 0 
+		}
+		if $r == 10 { 
+			entity spawnat enemy_specimen_2 6 5 0 0 
+		}
+		if $r == 11 { 
+			entity spawnat enemy_specimen_2 4 21 0 0 
+		}
+		if $r == 12 { 
+			entity spawnat enemy_specimen_2 4 21 0 0 
+		}
+		if $r == 13 { 
+			entity spawnat enemy_specimen_2 4 21 0 0 
+		}
+		if $r == 14 { 
+			entity spawnat enemy_specimen_2 5 8 0 0 
+		}
+		if $r == 15 { 
+			entity spawnat enemy_specimen_2 5 8 0 0 
+		}
+		if $r == 16 { 
+			entity spawnat enemy_specimen_2 5 8 0 0 
+		}
+		if $r == 17 { 
+			entity spawnat enemy_specimen_2 5 11 0 0 
+		}
+		if $r == 18 { 
+			entity spawnat enemy_specimen_2 5 11 0 0 
+		}
+		if $r == 19 { 
+			entity spawnat enemy_specimen_2 5 11 0 0 
+		}
+		if $r == 20 { 
+			entity spawnat enemy_specimen_2 2 4 0 0 
+		}
+		if $r == 21 { 
+			entity spawnat enemy_specimen_2 2 4 0 0 
+		}
+		if $r == 22 { 
+			entity spawnat enemy_specimen_2 7 13 0 0 
+		}
+		if $r == 23 { 
+			entity spawnat enemy_specimen_2 4 8 1 0 
+		}
+		if $r == 24 { 
+			entity spawnat enemy_specimen_2 4 8 1 0 
+		}
+		if $r == 25 { 
+			entity spawnat enemy_specimen_2 4 8 1 0 
+		}
+		if $r == 26 { 
+			entity spawnat enemy_specimen_2 5 13 1 0 
+		}
+		if $r == 27 { 
+			entity spawnat enemy_specimen_2 6 10 1 0 
+		}
+		if $r == 28 { 
+			entity spawnat enemy_specimen_2 6 10 1 0 
+		}
+		if $r == 29 { 
+			entity spawnat enemy_specimen_2 16 10 1 0 
+		}
+	}
+
+}

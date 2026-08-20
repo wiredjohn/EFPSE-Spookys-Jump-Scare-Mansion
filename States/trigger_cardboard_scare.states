@@ -1,0 +1,8 @@
+// This FSM makes the trigger invisible in game, but displays an icon in the editor to make map making clearer.
+// Frame 0 is the icon that appears in the editor.
+// Frame 1 is a 1x1 transparent pixel, which is specified below to make the decoration appear invisible in game.
+
+image trigger_cardboard_scare 1 1
+
+state IDLE NONE 0
+frame 1 0.25 0 0 0 READY

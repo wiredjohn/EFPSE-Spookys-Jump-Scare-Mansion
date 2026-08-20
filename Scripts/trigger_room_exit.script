@@ -1,0 +1,77 @@
+// Script runs when you leave a room.
+//   - Increases the current room count
+//	 - Randomly selects the next level to go to 
+//   - Checks if you've hit the last room (50) and sends you to the game over Map
+//	 - Checks if you're currently being chased and updates flags/values
+
+sound door_open "Sounds/door_open.wav"
+play sound door_open 2
+
+global.room_count+=1
+
+// Allow enemy to be spawned in next room if currently being chases
+global.room_monster_spawned=0 
+
+// Game over check
+if $global.room_count == 50 {
+	map goto 2
+}
+
+level_min=3 //Lowest Map index 
+level_max=7 //Highest Map index
+
+// Expand the range of Maps player could go to next as they progress
+if $global.room_count > 5 {
+	level_max=12
+}
+if $global.room_count > 10 {
+	level_min=13
+	level_max=30
+}
+if $global.room_count > 25 {
+	level_min=3
+}
+
+call GetNewRoom
+
+// Procedure selects a random Map id within the current range
+// If the selected map is the current map, or either of the last 2 then select another Map by calling GetNewRoom again
+procedure GetNewRoom
+	room=RANDOM($level_min,$level_max)
+	if $room == $global.current_room {
+		call GetNewRoom
+	}
+	if $room == $global.last_map1 {
+		call GetNewRoom
+	}
+	if $room == $global.last_map2 {
+		call GetNewRoom
+	}
+	global.last_map2=$global.last_map1
+	global.last_map1=$global.current_room
+	global.current_room=$room
+end;
+
+// Chase check
+// Don't chase the player in the very first room
+if $global.room_count > 1 {
+	// If the player's not being chased then random chance they could start being chased
+	if $global.player_is_chased == 0 {
+		target=RANDOM(1,$global.chase_chance)
+		roll=RANDOM(1,$global.chase_chance)
+		
+		if $target == $roll {
+			global.player_is_chased=1
+			global.player_chase_duration=$global.chase_duration
+		}
+	} else {
+		global.player_chase_duration-=1
+		
+		// Stop chasing the player if the duration of the current chase has hit 0
+		if $global.player_chase_duration == 0 {
+			global.player_is_chased=0
+		}
+	}
+}
+
+map goto $room

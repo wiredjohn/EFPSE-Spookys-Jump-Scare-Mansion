@@ -1,0 +1,37 @@
+// FSM to handle specimen_2 chasing the player
+// This is janky and buggy and the native pathfinding isn't the best, but it works
+// enemy_specimen_2's attack "Is Shooting", but the FSM checks the enemy's current
+//  distance from the player and only "Fires" when it's close
+// This is to emulate a melee attack, because the native melee attack was failing 
+//  to fire when specimen_2 was chasing the player as enemies need to exit the 
+//  chase state before attacking which then make the enemy out of range and unable 
+//  to melee attack...
+
+image enemy_specimen_2 0 0
+sound enemy_hit
+
+state IDLE NONE 0
+frame 0 0.25 0 0 0 NONE
+frame 1 0 0 0 0 SETVAR dist PLAYERDISTANCE
+frame 1 0 0 0 0 JUMPIFLESS dist 50 HIT
+frame 1 0 0 0 0 JUMPIFGREATER dist 600 DEAD
+frame 1 0 0 0 0 JUMPIFGREATER dist 50 CHASE
+
+state SEE CHASE 0
+frame 0 0.25 0 0 0 NONE
+
+state CHASE IDLE 0
+frame 0 0.25 0 0 0 NONE
+frame 1 0 0 0 0 SETVAR dist PLAYERDISTANCE
+frame 1 0 0 0 0 JUMPIFLESS dist 50 HIT
+frame 1 0 0 0 0 JUMPIFGREATER dist 600 DEAD
+frame 1 0 0 0 0 JUMPIFGREATER dist 50 CHASE
+
+state HIT CHASE 0 
+frame 1 0.25 0 0 0 READY
+frame 1 0.25 0 0 0 ATTACK
+frame 1 0.25 0 0 0 SOUND enemy_hit
+frame 2 0.25 0 0 0 READY
+
+state DEAD NONE 0 
+frame 0 0.25 0 0 0 NONE

@@ -1,0 +1,54 @@
+// This script runs constantly while playing this Map. Every interval it will:
+//   - Update health bar
+//	 - Update stamina bar
+//	 - Handle sprint speed changes
+//	 - Update stamina level (go down if sprinting, recharge if walking)
+
+// Display current room number
+hud text a "ROOM: $global.room_count" 48 0.8 0.05 100 94 0 10
+
+// Display Player health bar and stamina bar
+player check hp player_health
+hud image Bars_Container 0.02 0.05 1 "HUD/player_bars_container.png" 2
+hud image Bars_Health 0.076 0.089 1 "HUD/player_bars_health.png" 1
+hud image Bars_Stamina 0.07 0.135 1 "HUD/player_bars_stamina.png" 1
+
+// Scale health bar image relative to Player's current health
+health_scale = 0.01
+health_scale*=$player_health
+hud scale Bars_Health $health_scale 1
+
+// Scale stamina bar image relative to Player's current stamina level
+stamina_scale = 0.01
+stamina_scale*=$global.player_stamina_current
+hud scale Bars_Stamina $stamina_scale 1
+
+// Sprint Logic. Runs if Player is pressing the assigned "Sprint" input
+if $global.sprint == 2 {
+	ntime+=$global.deltaTime
+	if $ntime > 0.1 {
+		global.sprint=0
+		ntime=0
+		player speed $global.player_speed_normal
+		
+		//UPDATE STAMINA - decrease as player is sprinting
+		if $global.player_stamina_current < $global.stamina_rate_decrease {
+			global.player_stamina_current=0 
+		} 
+		if $global.player_stamina_current < $player_sprint_level_min {
+			global.player_stamina_current=0
+		} else {
+			global.player_stamina_current-=$global.stamina_rate_decrease
+		}
+	}
+} else {
+	ntime+=$global.deltaTime
+	if $ntime > 0.1 {
+		ntime=0
+		
+		//UPDATE STAMINA - player isn't sprinting so recharge
+		if $global.player_stamina_current < $global.player_stamina_max {
+			global.player_stamina_current+=$global.stamina_rate_increase
+		}		
+	}
+}

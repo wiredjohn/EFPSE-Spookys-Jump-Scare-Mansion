@@ -1,0 +1,15 @@
+// Generate 2 random numbers using the global.scare_chance and if they match spawn the cardboard_scare
+
+target=RANDOM(1,$global.scare_chance)
+roll=RANDOM(1,$global.scare_chance)
+
+if $target == $roll {
+	// Get player's current position, remove 1 tile from the Y and spawn the ghost there
+	// This assumes the player is moving "Up" on the map, so there's a limitation to where you should place these triggers
+	player check position global.Scare_X global.Scare_Y global.Scare_Z
+	tilesFromPlayer=1
+	global.Scare_Y-=$tilesFromPlayer
+	entity spawnat decoration_cardboard_scare $global.Scare_X $global.Scare_Y $global.Scare_Z 180
+	sound Scare "Sounds/cardboard_scare.wav"
+	play sound Scare
+}

@@ -1,0 +1,23 @@
+// Check if the player is sprinting, has stamina and isn't being slowed, then flags them as sprinting
+// Sprint speed value is hardcoded as this script runs from Menu.script input binding, so it does not
+//  have scope of global variables...
+
+if $global.player_stamina_current > $global.player_stamina_min {
+	if $global.player_slowed == 0 {
+		if $global.sprint == 0 {
+			global.sprint=1
+		}
+
+		if $global.sprint == 1 {
+			player speed 300 //this needs to be hardcoded for some reason?
+			global.sprint=2
+		}
+		
+		if $global.player_stamina_current < 10 {
+			player speed $global.player_speed_normal
+			global.sprint=2
+		}
+	} 
+}
+
+map quickreturn 3

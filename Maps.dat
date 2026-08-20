@@ -1,0 +1,1020 @@
+GLOBAL.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_spe_start.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_spe_end.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 184 255 64
+128 255 255 64
+255 255 111 64
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_01.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_02.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_03.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_04.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_05.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_06.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_07.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_08.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_09.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_10.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_11.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_12.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_13.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_14.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_15.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_16.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_17.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_18.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_19.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_20.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_21.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_22.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_23.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_24.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_25.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_26.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0
+map_man_27.eem
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+trigger_room_exit
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None 0
+76 76 76
+0 0 0 300
+255 255 255 64
+255 255 255 128
+255 255 255 256
+None
+None
+None
+None
+0 None None None None 1 0 0

@@ -1,0 +1,64 @@
+decoration_cardboard_scare 1
+100
+0
+0
+0.3
+-1
+-1
+16 0 0 0 0 0
+trigger_cardboard_scare 2
+100
+0
+0
+1
+-1
+-1
+16 1 0 0 0 1
+trigger_slow_tile 3
+100
+0
+0
+1
+-1
+-1
+16 1 0 0 0 1
+trigger_slow_tile_exit 4
+100
+0
+0
+1
+-1
+-1
+16 1 0 0 0 1
+trigger_specimen_2 5
+100
+0
+0
+1
+-1
+-1
+16 1 0 0 0 1
+trigger_room_exit 7
+100
+0
+0
+1
+-1
+-1
+25 1 0 0 0 0
+decoration_cake 8
+100
+0
+1
+0.05
+-1
+-1
+16 0 0 0 0 0
+decoration_balloons 9
+100
+0
+0
+0.3
+-1
+-1
+16 0 0 0 0 0

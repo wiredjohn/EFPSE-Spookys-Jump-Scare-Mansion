@@ -1,0 +1,8 @@
+// Increase player speed and update their player_slowed flag
+// BUG: player can't sprint on a slow_tile_exit
+
+player speed $global.player_speed_normal
+
+if $global.player_slowed == 1 {
+	global.player_slowed=0
+}

@@ -236,8 +236,8 @@ mtext "CROUCH" $settingsX 450 63
 mcontrollerinput $settingsValuesX 450 "duck" 63
 mtext "RELOAD" $settingsX 490 63
 mcontrollerinput $settingsValuesX 490 "reload" 63
-mtext "MAP" $settingsX 530 63
-mcontrollerinput $settingsValuesX 530 "map" 63
+mtext "SPRINT" $settingsX 530 63
+mcontrollerinput $settingsValuesX 530 Sprint.script 63
 mtext "FLASHLIGHT" $settingsX 570 63
 mcontrollerinput $settingsValuesX 570 "flashlight" 63
 mtext "HOLSTER" $settingsX 610 63

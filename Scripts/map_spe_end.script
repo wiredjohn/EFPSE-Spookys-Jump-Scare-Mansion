@@ -1,0 +1,2 @@
+sound Applause "Sounds/applause.wav"
+play sound Applause

@@ -1,2 +1,5 @@
+vn 1
+text "You Did It!"
+
 //GAME OVER -return to main menu
 map goto -1

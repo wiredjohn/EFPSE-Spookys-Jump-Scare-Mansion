@@ -1,7 +1,7 @@
 // Script runs when you leave a room.
 //   - Increases the current room count
 //	 - Randomly selects the next level to go to 
-//   - Checks if you've hit the last room (50) and sends you to the game over Map
+//   - Checks if you've hit the last room (global.game_over_room) and sends you to the game over Map
 //	 - Checks if you're currently being chased and updates flags/values
 
 sound door_open "Sounds/door_open.wav"
@@ -13,7 +13,7 @@ global.room_count+=1
 global.room_monster_spawned=0 
 
 // Game over check
-if $global.room_count == 50 {
+if $global.room_count == $global.game_over_room {
 	map goto 2
 }
 

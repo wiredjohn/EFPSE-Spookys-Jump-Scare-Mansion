@@ -5,7 +5,8 @@ global.last_map1=0					// store the previous map index to exclude it from next m
 global.last_map2=0					// store the second previous map index to exclude it from next map selection
 
 global.room_count=0					// number of rooms completed
-global.scare_chance=12				// probability that a trigger_cardboard_scare runs, e.g. if 10 then chance is 1 in 10
+global.game_over_room=50			// go to game over room when room_count hits this number
+global.scare_chance=10				// probability that a trigger_cardboard_scare runs, e.g. if 10 then chance is 1 in 10
 global.chase_chance=5				// probability that specimen_2 will start chasing through rooms if not being chased already
 global.chase_duration=5				// the number of rooms specimen_2 will spawn in while player being chased
 

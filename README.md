@@ -20,6 +20,7 @@ Made with [EasyFPSEditor_CE_bugtest5.exe](https://github.com/CG8516/DumpingGroun
 - Enemy spawn locations hardcoded on each map ([trigger_specimen_2.script](/Scripts/trigger_specimen_2.script))
 - Cardboard scare triggers assume player is going down on Y axis (moving up the screen) and spawns the scare on the next tile in this direction
 - No background music, couldn't figure out a way to continue playing across different maps without it stopping and restarting
+- Couldn't figure out a way of allowing enemies to travel through invisible blocks, so their path finding is goofy on the dark pit levels
 
 
 ## C# Script Generator and Map Settings Overwriter
@@ -45,6 +46,8 @@ Assets, resources and tutorials used to create this.
 - Textures = https://spookys-jump-scare-mansion.fandom.com/wiki/Floors_And_Walls
 - Enemy Sounds = https://sfxr.me/
 - Door Sounds = https://opengameart.org/content/door-open-door-close
+- Applause Sound = https://opengameart.org/content/applause
+- Footstep Sound = https://opengameart.org/content/nature-sounds-pack
 - Font = https://www.dafont.com/lunchtime-doubly-so.font
 
 ### Tutorials & Guides
